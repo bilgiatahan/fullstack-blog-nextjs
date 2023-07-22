@@ -1,0 +1,137 @@
+body {
+  overflow: hidden;
+  background-color: #e893cf;
+}
+
+.box {
+  max-width: 800px;
+  height: 200px;
+  display: flex;
+  filter: brightness(0.5);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.name {
+  font-size: 2.5rem;
+  padding: 0 2rem;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.mario {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  background: url("/images/us.png");
+  background-size: cover;
+  left: 0px;
+
+  -webkit-animation: play 0.8s steps(4) infinite, run 7s both infinite linear;
+
+  animation: play 0.8s steps(4) infinite, run 7s both infinite linear;
+}
+
+.mario:after {
+  content: "betug";
+  font-size: 22px;
+  background-color: yellowgreen;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.heart {
+  animation: heart 0.8s steps(4) infinite;
+}
+
+@-webkit-keyframes heart {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes heart {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes play {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes play {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes run {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes run {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  margin-top: 3rem;
+  height: 10%;
+  width: 100%;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+h2 {
+  color: red;
+  font-size: 3rem;
+  width: 100%;
+  white-space: nowrap;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  animation: typing 6s steps(200, end) infinite,
+    /* # Adımlar = # Karakter Sayısı */ blink-caret 0.5s step-end infinite
+      alternate;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -22,7 +22,7 @@ const Blog: React.FC = () => {
 
       <div className="player">
         <ReactPlayer
-          url="https://www.youtube.com/watch?v=o2gAwh8x4Bs"
+          url="https://www.youtube.com/watch?v=352QSI4nsQk"
           controls={false}
           loop={true}
           width={"200px"}
